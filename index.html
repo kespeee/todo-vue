@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>VueJS Todo App</title>
 
     <link rel="icon" href="images/favicon.png" sizes="32x32">
@@ -11,7 +9,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
-    <script src="app.js"></script>
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -34,7 +31,7 @@
                        v-model="new_todo"
                        @keyup.enter="addItem"
                 >
-                <div class="btn btn-add" :class="{ active: new_todo }" @click="addItem">+</div>
+                <div class="btn btn-add" v-bind:class="{ active: new_todo }" @click="addItem">+</div>
             </form>
 
             <div v-if="pending.length > 0">
@@ -78,5 +75,6 @@
             View on <a href="https://github.com/kespeee/todo-vue">Github</a>
           </footer>
           <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <script src="app.js"></script>
 </body>
 </html>

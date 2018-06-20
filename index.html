@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VueJS Todo App</title>
+
+    <link rel="icon" href="images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,100,700,100italic,300italic,400italic">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>ToDo List App</h1>
+        <section class="todo-wrapper">
+            <h2 class="todo-title">{{ today.day }}<br>{{ today.date }}</h2>
+            <form @keydown.enter.prevent="">
+                
+            </form>
+        </section>
+    </div>
+</body>
+</html>
